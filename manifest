@@ -1,0 +1,64 @@
+{
+  "name": "Subbiem8",
+  "version": "1.0.0",
+  "description": "Automate client updates, job notifications, and quote follow-ups directly from ServiceM8.",
+  "developer": {
+    "name": "Subbiem8 Team",
+    "email": "support@subbiem8.com",
+    "website": "https://subbiem8.com"
+  },
+  "permissions": [
+    "jobs:read",
+    "jobs:write",
+    "clients:read",
+    "staff:read",
+    "messages:send",
+    "attachments:read"
+  ],
+  "menuItems": [
+    {
+      "name": "Send Subbiem8 Update",
+      "type": "jobAction",
+      "callbackUrl": "https://subbiem8-server.onrender.com/servicem8/job-update"
+    },
+    {
+      "name": "View Client Summary",
+      "type": "clientAction",
+      "callbackUrl": "https://subbiem8-server.onrender.com/servicem8/client-summary"
+    },
+    {
+      "name": "Subbiem8 Dashboard",
+      "type": "menu",
+      "callbackUrl": "https://subbiem8-server.onrender.com/dashboard"
+    }
+  ],
+  "eventHooks": [
+    {
+      "event": "job.updated",
+      "callbackUrl": "https://subbiem8-server.onrender.com/servicem8/webhook/job-updated"
+    },
+    {
+      "event": "job.completed",
+      "callbackUrl": "https://subbiem8-server.onrender.com/servicem8/webhook/job-completed"
+    }
+  ],
+  "auth": {
+    "type": "oauth",
+    "redirectUrl": "https://subbiem8-server.onrender.com/servicem8/oauth/callback"
+  },
+  "billing": {
+    "type": "monthly",
+    "price": 14.99,
+    "currency": "AUD",
+    "trialDays": 14
+  },
+  "branding": {
+    "icon": "https://subbiem8.com/assets/icon512.png",
+    "primaryColor": "#0074D9",
+    "accentColor": "#00C49A"
+  },
+  "support": {
+    "email": "support@subbiem8.com",
+    "url": "https://subbiem8.com/support"
+  }
+}
