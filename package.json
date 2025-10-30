@@ -1,0 +1,13 @@
+{
+  "name": "subbiem8-server",
+  "version": "1.0.0",
+  "description": "Backend for the Subbiem8 ServiceM8 add-on",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
