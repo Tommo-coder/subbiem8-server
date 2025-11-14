@@ -1,4 +1,5 @@
 {
+  "type": "addon",
   "name": "Subbiem8",
   "version": "1.0.0",
   "description": "Automate client updates, job notifications, and quote follow-ups directly from ServiceM8.",
